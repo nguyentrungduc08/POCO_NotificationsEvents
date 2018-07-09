@@ -37,16 +37,15 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/PrepareConsoleLogger.o \
 	${OBJECTDIR}/ScopedLogMessage.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/main1.o
+	${OBJECTDIR}/main2.o
 
 
 # C Compiler Flags
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-std=c++11
+CXXFLAGS=-std=c++11
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -75,15 +74,10 @@ ${OBJECTDIR}/ScopedLogMessage.o: ScopedLogMessage.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr/local/include/Poco -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ScopedLogMessage.o ScopedLogMessage.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main2.o: main2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/local/include/Poco -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/main1.o: main1.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main1.o main1.cpp
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main2.o main2.cpp
 
 # Subprojects
 .build-subprojects:

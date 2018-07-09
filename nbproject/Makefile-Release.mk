@@ -37,8 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/PrepareConsoleLogger.o \
 	${OBJECTDIR}/ScopedLogMessage.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/main1.o
+	${OBJECTDIR}/main2.o
 
 
 # C Compiler Flags
@@ -75,15 +74,10 @@ ${OBJECTDIR}/ScopedLogMessage.o: ScopedLogMessage.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ScopedLogMessage.o ScopedLogMessage.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main2.o: main2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/main1.o: main1.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main1.o main1.cpp
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main2.o main2.cpp
 
 # Subprojects
 .build-subprojects:

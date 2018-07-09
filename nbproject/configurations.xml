@@ -16,8 +16,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
-      <itemPath>main1.cpp</itemPath>
+      <itemPath>main2.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -44,6 +43,7 @@
           <incDir>
             <pElem>/usr/local/include/Poco</pElem>
           </incDir>
+          <commandLine>-std=c++11</commandLine>
         </ccTool>
         <linkerTool>
           <linkerLibItems>
@@ -63,9 +63,10 @@
       </item>
       <item path="ScopedLogMessage.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="main1.cpp" ex="false" tool="0" flavor2="0">
+      <item path="main2.cpp" ex="false" tool="0" flavor2="0">
+        <cTool>
+          <commandlineTool>g++</commandlineTool>
+        </cTool>
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -96,9 +97,7 @@
       </item>
       <item path="ScopedLogMessage.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="main1.cpp" ex="false" tool="0" flavor2="0">
+      <item path="main2.cpp" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>
